@@ -1,0 +1,22 @@
+[project]
+name = "rag-bootcamp4-docrag"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "beautifulsoup4>=4.14.2",
+    "faiss-cpu>=1.12.0",
+    "langchain>=1.0.2",
+    "langchain-community>=0.4",
+    "langchain-openai>=1.0.1",
+    "langgraph>=1.0.1",
+    "mediawikiapi>=1.3",
+    "openai>=2.6.0",
+    "pydantic>=2.12.3",
+    "pypdf>=6.1.3",
+    "python-dotenv>=1.1.1",
+    "requests>=2.32.5",
+    "streamlit>=1.50.0",
+    "wikipedia>=1.4.0",
+]
