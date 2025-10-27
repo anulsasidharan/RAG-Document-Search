@@ -2,6 +2,33 @@
 A simple yet powerful pipeline for building a Retrieval-Augmented Generation (RAG) powered document search system.
 
 
+## Architecture Diagram
+
+```mermaid
+graph LR
+  A[User Input] --> B[Streamlit App]
+  B --> C[main.py]
+  C --> D[Document Ingestion]
+
+  subgraph Ingestion
+    D[Document Ingestion] --> E[PDF/Text Files]
+    D --> F[Embedding Generation]
+    F --> G[Vector Store]
+    
+  end
+  
+   G --> J["LLM (e.g. OpenAI)"] 
+
+  subgraph Query
+    H[Query Processing] --> I[Embedding Generation]
+    I --> G
+    H --> J["LLM (e.g. OpenAI)"]
+    J --> K[Response Generation]
+  end
+  
+  K --> L[User Output]
+```
+
 
 ## 🎯 What this is
 
